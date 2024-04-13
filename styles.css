@@ -16,6 +16,11 @@ h1 {
 #book-form {
   margin-top: 20px;
 }
+input{
+  border-radius: 5px;
+  border: solid 1px rgb(12, 53, 158);
+}
+
 #add-book-form > * {
   margin: 5px 5px;
 }

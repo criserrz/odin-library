@@ -27,12 +27,13 @@ function displayBooks() {
       <h3>${book.title}</h3>
       <p>Author: ${book.author}</p>
       <p>Pages: ${book.pages}</p>
+      <div class="read">
       <p>Read:</p> 
       <div class="toggle">
       <input type="checkbox" id="read-${index}" class="toggle-checkbox" ${book.read ? 'checked' : ''}>
       <label for="read-${index}" class="toggle-label"></label>
-    </div>
-      
+      </div>
+      </div>
       <br>
       <button id="remove-btn" onclick="removeBook(${index})">Remove</button>
       

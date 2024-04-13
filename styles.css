@@ -20,7 +20,13 @@ input{
   border-radius: 5px;
   border: solid 1px rgb(12, 53, 158);
 }
-
+.read{
+  display: flex;
+  align-items: center;
+}
+.toggle{
+  margin-left: 5px;
+}
 #add-book-form > * {
   margin: 5px 5px;
 }

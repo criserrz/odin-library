@@ -19,7 +19,10 @@ function displayBooks() {
   const bookList = document.getElementById('book-list');
   bookList.innerHTML = '';
 
-  myLibrary.forEach((book, index) => {
+  // Reverse the order of the library array
+  const reversedLibrary = myLibrary.slice().reverse();
+
+  reversedLibrary.forEach((book, index) => {
     const bookCard = document.createElement('div');
     bookCard.classList.add('book-card');
     
@@ -28,15 +31,13 @@ function displayBooks() {
       <p>Author: ${book.author}</p>
       <p>Pages: ${book.pages}</p>
       <div class="read">
-      <p>Read:</p> 
+      <p>Read: ${book.read ? 'Yes' : 'No'}</p>
       <div class="toggle">
-      <input type="checkbox" id="read-${index}" class="toggle-checkbox" ${book.read ? 'checked' : ''}>
-      <label for="read-${index}" class="toggle-label"></label>
+        <input type="checkbox" id="read-${myLibrary.length - 1 - index}" class="toggle-checkbox" ${book.read ? 'checked' : ''}>
+        <label for="read-${myLibrary.length - 1 - index}" class="toggle-label"></label>
       </div>
       </div>
-      <br>
-      <button id="remove-btn" onclick="removeBook(${index})">Remove</button>
-      
+      <button onclick="removeBook(${myLibrary.length - 1 - index})">Remove</button>
     `;
 
     bookList.appendChild(bookCard);

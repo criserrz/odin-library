@@ -31,7 +31,7 @@ function displayBooks() {
       <p>Author: ${book.author}</p>
       <p>Pages: ${book.pages}</p>
       <div class="read">
-      <p>Read: ${book.read ? 'Yes' : 'No'}</p>
+      <p>Read:</p>
       <div class="toggle">
         <input type="checkbox" id="read-${myLibrary.length - 1 - index}" class="toggle-checkbox" ${book.read ? 'checked' : ''}>
         <label for="read-${myLibrary.length - 1 - index}" class="toggle-label"></label>
